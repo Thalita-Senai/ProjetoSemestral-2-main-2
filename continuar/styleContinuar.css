@@ -113,7 +113,7 @@ body{
 }
 .underline {
     text-decoration: underline white; 
-    text-underline-offset: 3px;"
+    text-underline-offset: 3px;
 }
 .RPG{
     position: relative;
@@ -195,5 +195,5 @@ body{
 }
 .es img{
     position: relative;
-    bottom: 19px;
+   bottom:19px;
 }
