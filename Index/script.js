@@ -80,13 +80,13 @@ const targetDiv = document.getElementById('targetDiv');
 // Função para verificar a visibilidade e aplicar ou remover a classe
 function handleScroll() {
     if (isElementInView(targetDiv)) {
-        targetDiv.classList.add('visible'); // Adiciona a classe para mostrar a div com animação
+        targetDiv.classList.add('visible');
     } else {
-        targetDiv.classList.remove('visible'); // Remove a classe para esconder a div quando não estiver visível
+        targetDiv.classList.remove('visible');
     }
 }
 
-// Evento de rolagem
+// Roll
 window.addEventListener('scroll', handleScroll);
 
 // Chama a função ao carregar a página para garantir que a div apareça se já estiver visível
