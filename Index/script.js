@@ -8,7 +8,6 @@ function closeNav() {
     document.getElementById("myNav").style.height = "0%"; // Esconder o overlay
 }
 
-
 // Seleciona todas as divs com a classe 'clickable'
 const divs = document.querySelectorAll('.clickable');
 
@@ -66,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
 
 
   //div final

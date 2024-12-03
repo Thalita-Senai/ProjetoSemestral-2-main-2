@@ -38,6 +38,24 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Salva as preferências no localStorage
             localStorage.setItem('preferencias', JSON.stringify(preferenciasSalvas));
-        });
-    });
+        });
+    });
+});
+
+// Verifica as condições ao clicar no botão "Entrar"
+document.getElementById('entrarBtn').addEventListener('click', function(event) {
+    // Verifique se as preferências estão salvas no localStorage
+    const preferenciasSalvas = JSON.parse(localStorage.getItem('preferencias')) || [];
+
+    // Se as preferências estiverem vazias
+    if (preferenciasSalvas.length === 0) {
+        // Impede a navegação
+        event.preventDefault();
+        alert('Por favor, escolha ao menos uma categoria.');
+    } else {
+        // Se as preferências não estiverem vazias, permite a navegação para o destino
+        console.log("Preferências válidas, navegação permitida.");
+        // Redireciona para a página "../Index/index.html"
+        window.location.href = "../Index/index.html";
+    }
 });

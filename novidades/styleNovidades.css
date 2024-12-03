@@ -385,9 +385,7 @@ h2 {
 .container2 {
     margin: 35px 20px;
 }
-.title {
-    margin-bottom: 15px;
-}
+
 h1 {
     font-size: 27px;
     margin-bottom: 40px;
@@ -398,6 +396,11 @@ h1 {
     letter-spacing: 5px;
 }
 
+.title {
+    margin-top: 25px;
+    margin-bottom: -5px;
+    
+}
 h4 {
     font-size: 12px;
     color: white;
@@ -579,11 +582,6 @@ footer {
     margin-bottom: 80px;
 }
 
-.title {
-    font-family: 'Inter';
-    font-size: 35px;
-    color: white;
-}
 
 hr {
     border-top: 5px solid white;

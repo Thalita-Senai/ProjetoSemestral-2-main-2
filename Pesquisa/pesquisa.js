@@ -178,38 +178,50 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 
-//div final
+// Função para rolar até o topo
+function scrollToTop() {
+  // Adiciona a classe 'visible' para iniciar a animação
+  targetDiv.classList.add('visible');
+  
+  // Aguarda 500ms (tempo da animação) antes de rolar para o topo
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, 500); // Espera o tempo da animação para permitir que a transição seja visível
+}
+
 // Função para verificar se o elemento está visível na tela
 function isElementInView(element) {
   const rect = element.getBoundingClientRect();
-  return rect.top < window.innerHeight && rect.bottom >= 0; // Mudança na condição
+  return rect.top < window.innerHeight && rect.bottom >= 0; // Verifica se a div está visível
 }
 
-// Alvo da div
-const targetDiv = document.getElementById('targetDiv');
+// Espera até que o DOM seja completamente carregado antes de acessar o targetDiv
+document.addEventListener('DOMContentLoaded', function() {
+  // Alvo da div que queremos observar
+  const targetDiv = document.getElementById('targetDiv');
 
-// Função para verificar a visibilidade e aplicar ou remover a classe
-function handleScroll() {
-  if (isElementInView(targetDiv)) {
-    targetDiv.classList.add('visible'); // Adiciona a classe para mostrar a div com animação
-  } else {
-    targetDiv.classList.remove('visible'); // Remove a classe para esconder a div quando não estiver visível
+  // Função para aplicar a classe 'visible' de acordo com a visibilidade
+  function handleScroll() {
+    if (isElementInView(targetDiv)) {
+      targetDiv.classList.add('visible'); // Adiciona a classe para mostrar a div com animação
+    } else {
+      targetDiv.classList.remove('visible'); // Remove a classe quando não estiver visível
+    }
   }
-}
 
-// Evento de rolagem
-window.addEventListener('scroll', handleScroll);
+  // Evento de rolagem
+  window.addEventListener('scroll', handleScroll);
 
-// Chama a função ao carregar a página para garantir que a div apareça se já estiver visível
-window.addEventListener('load', handleScroll);
+  // Chama a função ao carregar a página para garantir que a div apareça se já estiver visível
+  window.addEventListener('load', handleScroll);
 
-// Função para rolar até o topo (precisa ser implementada)
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
+  // Adiciona o evento de clique na div para rolar até o topo
+  document.querySelector('.voltar').addEventListener('click', scrollToTop);
+});
+
 
 
 

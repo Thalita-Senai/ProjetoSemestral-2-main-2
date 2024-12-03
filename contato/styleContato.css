@@ -198,11 +198,12 @@ input {
     margin-top: -15px;
 }
 textarea {
+    padding: 20px;
     resize: none;
     background-color: #e4d0e4;
     color: #333;
     height: 350px;
-    width: 730px;
+    width: 690px;
     margin-top: -15px;
 }
 h4 {

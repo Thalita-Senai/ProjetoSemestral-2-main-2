@@ -26,29 +26,35 @@ rel='stylesheet'>
 
 
     <main class="container">
-<form>
-        <h1>Login</h1>
-    <div class="input-box">
-        <input placeholder="Usuário" type="email">
-        <i class="bx bxs-user"></i>
-    </div>
-    <div class="input-box">
-        <input placeholder="senha" type="password">
-        <i class="bx bxs-lock-alt"></i>
-    </div>
-
-    <div class="remember-forgot">
-        <label>
-        <input type="checkbox"> Lembrar Senha
-        <a href="../EsqueciSenha/EsqueciSenha.html">Esqueci a Senha</a>
-    </label>
-    </div>
-
-    <button class="Login" type="submit"> <a href="../Apelido/Apelido.html">Login</a></button>
-
-    <div class="register-link">
-        <p>Não tem uma conta? <a href="../EntrarConta/Entrar.html">Cadastre-se</a></p>
-    </div>
-</form>
+        <form id="loginForm">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input id="username" placeholder="Usuário" type="email" required>
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+                <input id="password" placeholder="Senha" type="password" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+        
+            <div class="remember-forgot">
+                <label>
+                <input type="checkbox"> Lembrar Senha
+                <a href="../EsqueciSenha/EsqueciSenha.html">Esqueci a Senha</a>
+                </label>
+            </div>
+        
+            <!-- O botão de submit agora chama uma função JavaScript -->
+            <button id="loginButton" class="Login" type="button">Login</button>
+        
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="../EntrarConta/Entrar.html">Cadastre-se</a></p>
+            </div>
+        </form>
+        
+        <script src="login.js">
+        </script>
+        
+        
 </body>
 </html> 

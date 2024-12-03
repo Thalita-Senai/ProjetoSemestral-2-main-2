@@ -9,6 +9,18 @@ body{
     min-height: 100vh;
     height: 1100px;
 }
+.escurecer {
+    filter: brightness(0.7);
+}
+.testando {
+    margin-top: -22px;
+}
+.Simu {
+    margin-top: 5px;
+}
+.PL {
+    margin-bottom: -22px;
+}
 .sec1{
     display: flex;
     flex-direction: column;
@@ -29,6 +41,9 @@ body{
 .genero {
     border: solid 1px;
     transition: border 0.3s ease;
+}
+.genero:hover {
+    border: solid 1px white;
 }
 .possibilidade {
     transition: border 0.3s ease
@@ -96,6 +111,10 @@ body{
     left: 100px;
     margin-top: 30px;
 }
+.underline {
+    text-decoration: underline white; 
+    text-underline-offset: 3px;"
+}
 .RPG{
     position: relative;
     left: 130px;
@@ -153,7 +172,14 @@ body{
 }
 .SM{
     position: relative;
-    left: 110px;
+    left: 120px;
+    bottom: 105px;
+    color: #fff;
+    width: 200px;
+}
+.IN {
+    position: relative;
+    left: 130px;
     bottom: 105px;
     color: #fff;
     width: 200px;

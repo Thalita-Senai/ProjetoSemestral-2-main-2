@@ -158,6 +158,7 @@ header {
     display: none;
     margin-bottom: 50px;
     display: none;
+
   }
   .filterDiv.show {
     display: block; /* Exibe as divs com a classe 'show' */
@@ -175,7 +176,13 @@ header {
     font-size: 24px;
     color: #555;
   }
-  
+
+
+
+  .borda {
+    border: solid 3px #f1bdf7;
+
+  }
   
   
 
@@ -362,32 +369,41 @@ hr {
     flex-direction: row;
     height: 100px;
 }
-/* Estilos da div */
-#targetDiv {
-  opacity: 0; /* Começa invisível */
-  transform: translateY(50px); /* Um pequeno deslocamento para criar o efeito de deslizamento */
-  transition: opacity 1s ease-out, transform 1s ease-out; /* A transição suave para opacidade e movimento */
-  display: flex; /* Assegura que a imagem dentro da div tenha espaço para ser exibida */
-  justify-content: center; /* Centraliza a imagem na div */
-  align-items: center; /* Centraliza a imagem na div */
+
+
+
+/* Estilos da div que será clicada para rolar até o topo */
+/* Estilos gerais da div que será clicada */
+.voltar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 40px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  z-index: 500;
 }
 
-/* Classe para tornar a div visível */
-#targetDiv.visible {
-  opacity: 1; /* Torna a div visível */
-  transform: translateY(0); /* Retorna à posição original */
-}
-
-/* Estilo para a imagem */
+/* Estilo da imagem dentro da div */
 .voltar img {
   margin-right: 40px;
   height: 90px;
   width: 90px;
   margin-bottom: 10px;
-  object-fit: contain; /* Garante que a imagem não fique distorcida */
-  visibility: visible; /* Garante que a imagem seja visível */
 }
 
-.voltar:hover img {
-  cursor: pointer;
+/* Animação da div targetDiv */
+#targetDiv {
+  opacity: 0; /* Começa invisível */
+  transform: translateY(50px); /* Deslocamento inicial para criar o efeito de deslizar */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transições de opacidade e movimento suave */
 }
+
+/* Classe que torna a div visível e faz a animação */
+#targetDiv.visible {
+  opacity: 1; /* Torna a div visível */
+  transform: translateY(0); /* Retorna à posição original */
+}
+
+
+
